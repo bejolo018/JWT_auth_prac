@@ -1,0 +1,23 @@
+{
+  "name": "jwt_auth_prac",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bejolo018/JWT_auth_prac.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bejolo018/JWT_auth_prac/issues"
+  },
+  "homepage": "https://github.com/bejolo018/JWT_auth_prac#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4"
+  }
+}

@@ -30,4 +30,19 @@ router.post('/register', async (req, res) => {
     }
 })
 
+router.post('/login', async (req, res) => {
+    //Validation
+    const { error } = loginValidation(req.body);
+    if(error) return res.status(400).send(error.details[0].message);
+
+    // Check if email exists
+    const user = await User.findOne({email: req.body.email})
+    if(!user) return res.status(400).send("Email not found.");
+    // Check is correct password
+    const validPass = await bcrpyt.compare(req.body.password, user.password);
+    if(!validPass) return res.status(400).send('invalid password')
+
+    res.send('logged in!')
+})
+
 module.exports = router;
